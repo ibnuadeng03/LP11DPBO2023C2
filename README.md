@@ -34,15 +34,15 @@ e. Mahasiswa mampu memahami dan mengimplementasikan MVP (Model View Presenter) d
 
 ## Petunjuk Pengerjaan Soal.
 Buatlah program menggunakan konserp MVP yang diimplementasikan kedalam bahasa pemrograman PHP dengan spesifikasi sebagai berikut:
-- Download Kode PHP pada link berikut ini [di sini](https://drive.google.com/drive/u/1/folders/1ePCAcXj9KLugPXP_SXlDi2M7SGbpw1t3)
-- Extract file ZIP tadi lalu salin ke C:\xampp\htdocs\
+- Download Kode PHP pada link berikut ini [di sini.](https://drive.google.com/drive/u/1/folders/1ePCAcXj9KLugPXP_SXlDi2M7SGbpw1t3)
+- Extract file ZIP tadi lalu salin ke C:\xampp\htdocs\...
 - Akan ada 3 folder utama dalam project ini yakni : 
-  - Folder model merupakan model dari project aplikasi ini, dimana isinya terdiri dari file kelas model yang menjadi turunan (inherit) dari class DB pada file DB.class.php
-  - Folder view merupakan view dari project aplikasi ini, dimana file tersebut hanya bisa berhubungan dengan presenter.
-  - Folder templates berisi file-file html yang akan dimuat pada project.
-  - File pada folder presenter merupakan penghubung antara file-file yang berada pada file model dan view. Pada project tersebut terdapat file ProsesPasien yang merupakan presenter.
-  - Buka aplikasi XAMPP lalu nyalakan module Apache dan MySQL. Selanjutnya buka web browser dan ketikkan “localhost/phpmyadmin” pada address bar. Lalu import database baru oleh file pasien.sql dengan nama database masing-masing.
-  - Ketikkan localhost/[nama file masing-masing] pada address bar. Jika tampilan pada halaman web browser menjadi seperti gambar di bawah ini maka kalian telah berhasil mengakses programnya.
+  - Folder `model` merupakan model dari project aplikasi ini, dimana isinya terdiri dari file kelas model yang menjadi turunan (inherit) dari class DB pada file DB.class.php
+  - Folder `view` merupakan view dari project aplikasi ini, dimana file tersebut hanya bisa berhubungan dengan presenter.
+  - Folder `templates` berisi file-file html yang akan dimuat pada project.
+  - File pada folder `presenter` merupakan penghubung antara file-file yang berada pada file model dan view. Pada project tersebut terdapat file ProsesPasien yang merupakan presenter.
+  - Buka aplikasi `XAMPP` lalu nyalakan `module Apache dan MySQL`. Selanjutnya buka web browser dan ketikkan `localhost/phpmyadmin` pada *address bar*. Lalu import database baru oleh file `pasien.sql` dengan nama database masing-masing.
+  - Ketikkan `localhost/[nama file masing-masing]` pada *address bar*. 
   - Buatlah fitur CRUD untuk tabel yang sudah disediakan.
   - Tampilkan 2 kolom baru yaitu kolom email dan telepon yang sudah ada pada database.
 - Masukkan kode yang telah Anda buat pada repository GitHub milik Anda masing-masing dengan nama repository **"LP11DPBO2023..."** (..., diisi sesuai kelas C1/C2) yang diset Public, kemudian kumpulkan tautan/link repository GitHub tersebut [di sini](https://forms.gle/rvb1hKxbQVuYNbhKA) 
@@ -56,32 +56,22 @@ Buatlah program menggunakan konserp MVP yang diimplementasikan kedalam bahasa pe
 - [X] [*Hypertext Preprocessor* atau PHP](https://www.hostinger.co.id/tutorial/apa-itu-php/) : bahasa penulisan skrip *open-source* yang banyak digunakan dalam pemrograman atau pengembangan website *(web development)*. Bahasa ini umumnya dijalankan dalam komunikasi sisi server, dan saat ini didukung oleh hampir semua sistem.
 
 ## Selayang Pandang *Model View Presenter (MVP)* :
-xxxxxxxxxxxxxxxxxxxxxxxxx
-Model View Controller atau yang dapat disingkat MVC adalah sebuah pola arsitektur dalam membuat sebuah aplikasi dengan cara memisahkan kode menjadi tiga bagian yang terdiri dari:
+![mvp](https://github.com/ibnuadeng03/LP11DPBO2023C2/assets/100753882/f2e66b20-c876-4f4e-815b-49dd6d4c9688)
+
+*Model View Presenter* atau yang dapat disingkat MVP adalah sebuah pola arsitektur dalam membuat sebuah aplikasi dengan cara memisahkan kode menjadi tiga bagian yang terdiri dari:
 | *Bagian* | *Deskripsi* |
 | --- | --- |
-| Model | Bagian yang bertugas untuk menyiapkan, mengatur, memanipulasi, dan mengorganisasikan data yang ada di database.|
-| View | Bagian yang bertugas untuk menampilkan informasi dalam bentuk *Graphical User Interface (GUI)*.|
-| Controller | Bagian yang bertugas untuk menghubungkan serta mengatur model dan view agar dapat saling terhubung.|
-
-Dalam memproses program yang dirancang, MVC memiliki alur kerja (workflow) sebagai berikut:
-| *Tahap* | *Deskripsi* |
-| --- | --- |
-| 1 | Pada awalnya, view akan melakukan request data untuk ditampilkan pada interface pengguna |
-| 2 | Request tersebut akan diterima oleh controller untuk diteruskan kepada model untuk diproses lebih lanjut |
-| 3 | Model akan mencari data sesuai dengan request dari view pada database yang terhubung dengan aplikasi |
-| 4 | Setelah data ditemukan dan diolah, model akan memberikan data tersebut terhadap controller |
-| 5 | Controller mengambil data hasil pengolahan model dan mengaturnya di bagian view untuk ditampilkan pada interface pengguna |
+| Model | Merupakan business logic dan pengelola state suatu data. Mengambil dan memanipulasi data, komunikasi dengan presenter, serta berinteraksi dengan database. Model tidak terhubung langsung dengan view.|
+| View | Terdiri dari komponen UI seperti *Activity dan Fragment*. Ia hanya berkomunikasi dengan presenter.|
+| Presenter | Sebagai penghubung antara model dengan view. Ia mengatur apa saja yang akan ditampilkan ke view, Ia yang memberitahu pihak view apa yang mesti muncul. Ia juga yang akan mengirimkan data yang perlu disimpan lewat model.|
 
 Selain itu diperoleh manfaat dari MVC diantaranya: 
 | *Manfaat* |
 | --- |
-| Proses pengembangan website lebih efisien |
-| Testing jadi lebih mudah |
-| Bug lebih cepat dan mudah ditangani |
-| Maintenance lebih mudah |
-
-Selengkapnya Anda dapat mengetahui lebih jelas dan detail terkait MVC [disini](https://www.dicoding.com/blog/apa-itu-mvc-pahami-konsepnya/)
+| View tidak tahu apa-apa soal apa yang ia tampilkan sehingga layer view bisa diganti dengan lebih mudah. |
+| Komponen View dan Presenter yang bisa dipakai ulang *(reuse)* |
+| Kode lebih mudah dipahami dan dikelola |
+| Pengujian lebih mudah karena business logic dipisah dari UI |
 
 
 ## Tools :
@@ -96,35 +86,42 @@ Selengkapnya Anda dapat mengetahui lebih jelas dan detail terkait MVC [disini](h
 + XAMPP (diharapkan versi yang terbaru, disarankan 7 keatas)
 + Web Browser
 
-## Desain dan Alur Program :
-Program ini dibuat idenya berangkat dari sebuah organisasi dimasyarakat desa kampung halaman tempat saya lahir yakni Majalaya. Sehingga saya jadikan tema untuk tugas ini. Tentunya sekaligus untuk memperkenalkan kepada luar bahwa tentunya ada yang menjadi ciri khas dari setiap desa khusunya desa Majakerta, Majalaya atau disebuah wilayah atau perwilayahan.
-- User dapat melihat `Data Peserta Keanggotaan Organisasi Masyarakat` pada halaman `Home` dan tentunya pada halaman tersebut dapat melakukan : 
-  + Create/Tambah Data : Nama, Surel, No.Telp dan Organisasi Masyarakat, Klik Kirim sebagai Terminasi
+
+## Desain Database :
+![db](https://github.com/ibnuadeng03/LP11DPBO2023C2/assets/100753882/025f86d9-bfad-4bbb-a92d-7f60c39e158d)
+
+
+## Alur Program :
+- User dapat melihat `Data Pasien` pada halaman `Utama` dan tentunya pada halaman tersebut dapat melakukan : 
+  + Create/Tambah Data : NIK, Nama, Tempat Lahir, Tanggal Lahir, Jenis Kelamin, Surel dan Nomor Telepon, Klik Kirim sebagai Terminasi
   + Read : Membaca Data
-  + Update : Melakukan perubahan terhadap data Nama, Surel, No.Telp dan Organisasi Masyarakat, Klik Ubah sebagai Terminasi
+  + Update : Melakukan perubahan terhadap data NIK, Nama, Tempat Lahir, Tanggal Lahir, Jenis Kelamin, Surel dan Nomor Telepon, Klik Kirim sebagai Terminasi
   + Delete : Hapus Data
-- User dapat melihat `Data Organisasi Masyarakat` pada halaman `Organisasi` dan tentunya pada halaman tersebut dapat melakukan :
-  + Create/Tambah Data : Nama Organisasi, Tahun Didirikan, Klik Kirim sebagai Terminasi
-  + Read : Membaca Data
-  + Update : Melakukan perubahan terhadap data Nama Organisasi, Tahun Didirikan, Klik Ubah sebagai Terminasi
-  + Delete : Hapus Data
- 
-## Dokumentasi Running Program
-### a. Tampilan Menu Home (Data Peserta Keanggotaan Organisasi Masyarakat)
+
+
+## Running Program 
+Adapun cara mengeksekusi kode program dalam project ini adalah :
+1. Pastikan anda telah mengunduh [XAMPP](https://sourceforge.net/projects/xampp/files/XAMPP%20Windows/7.1.32/)
+2. Masukan folder **majakerta** ke dalam folder `htdocs` didalam direktori `XAMPP`.
+3. Aktifkan web server `Apache` dan `database MySQL` pada XAMPP.
+4. Masukan alamat berikut pada browser :
+   > localhost/phpmyadmin
+5. Buat database baru dan beri nama pasien.
+6. Kemudian klik pada database yang sudah dibuat dan klik *import*.
+7. Pilih file pasien.sql kemudian klik *go*. Tunggu beberapa saat hingga proses selesai.
+8. Setelah itu masukan alamat berikut pada browser:
+   > localhost/majakerta/index.php
+
+
+## Dokumentasi Program
+### a. Tampilan Awal
 | Menu | Foto Tangkapan Layar |
 | --- | --- |
-| `Home` | ![AP](/ss/1.png "1") |
+| `Tampilan Awal` | ![AP](/ss/1.png "1") |
 |        | ![AP](/ss/2.png "2") |
 
-### b. Tampilan Menu Organisasi (Data Organisasi Masyarakat)
-| Menu | Foto Tangkapan Layar |
-| --- | --- |
-| `Organisasi` | ![AP](/ss/3.png "3") |
-|              | ![AP](/ss/4.png "4") |
-
-### Video Selengkapnya :
-https://github.com/ibnuadeng03/TP4C2DPBO2023/assets/100753882/006ff092-60ec-4a6d-8a88-38e4267b52ad
-
+### b. Untuk melihat proses CRUD dapat dilihat di Video berikut ini :
+https://github.com/ibnuadeng03/LP11DPBO2023C2/assets/100753882/19b189ec-e41d-43a1-bdb6-6126f6674d6a
 
 
 
@@ -135,7 +132,7 @@ Barakallahu Fiikum.
 
 **Hatur Nuhun.**
 
-**Majalaya, 20 Mei 2023 M / 29 Syawal 1444 H.**
+**Majalaya, 02 Juni 2023 M / 13 Dzulkaidah 1444 H.**
 
 #### [Copyright © 2023. IBNU ADENG KURNIA.](https://me-qr.com/id/entry/vcard/MjuIan4)
 ###### Univ. Pendidikan Indonesia.
