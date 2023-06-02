@@ -18,7 +18,7 @@ Program Studi Ilmu Komputer.
 ```
 a. Mahasiswa mampu memahami konsep Object Oriented Programming (OOP) digunakan untuk penyelesaian permasalahan-permasalahan yang ada.
 b. Mahasiswa mampu memahami perbedaan antara Class dan object, implementasi class dan object, method dalam berbagai bahasa (C++, java, PHP, pyhton) serta type data nya.
-c. Kasus-kasus MVC (Model View Controller) dengan menggunakan bahasa PHP. 
+c. Kasus-kasus MVP (Model View Presenter) dengan menggunakan bahasa PHP. 
 d. Mahasiswa mampu memahami konsep MVP (Model View Presenter) dalam Pemrograman Berorientasi Objek.
 e. Mahasiswa mampu memahami dan mengimplementasikan MVP (Model View Presenter) dengan menggunakan bahasa pemrograman PHP.
 ```
