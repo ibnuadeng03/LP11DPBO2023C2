@@ -1,0 +1,105 @@
+<!-- /*  
+	Saya Ibnu Adeng Kurnia NIM 2101769 mengerjakan Latihan Praktikum 11
+	dalam mata kuliah desain dan pemrograman berorientasi objek C2 2023
+	untuk keberkahanNya maka saya tidak melakukan kecurangan seperti yang telah dispesifikasikan. 
+	Aamiin.
+*/
+
+/*  Design ini disusun dan/atau digunakan hanya untuk lingkungan sendiri.
+	Tidak untuk menjadi konsumsi/kepentingan umum.
+	Hanya untuk melengkapi tugas DPBO 2023.
+*/  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan 12 DPBO 2023</title>
+    <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.php">Selamat Datang di Sistem Reservasi Online Puskesmas Cikaro</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+    </nav>
+    <br>
+
+    <div class="container">
+      <p><center><img width="230" height="200" src="img/tambah.png" alt="" class=""></center></p>
+        <h3 class="text-center">LENGKAPI DENGAN TEPAT</h3><br>
+        <form action="create.php?UPDATE_LINK" method="post">
+            <div class="row mb-3">
+              <label for="nik" class="col-sm-2 col-form-label">NIK</label>
+              <div class="col-sm-10">
+                <input type="number" class="form-control" id="nik" name="nik" value="NIK_VALUE">
+              </div>
+            </div>
+            <div class="row mb-3">
+              <label for="nama" class="col-sm-2 col-form-label">Nama</label>
+              <div class="col-sm-10">
+                <input type="text" class="form-control" id="nama" name="nama" value="NAMA_VALUE">
+              </div>
+            </div>
+            <div class="row mb-3">
+                <label for="tempat" class="col-sm-2 col-form-label">Tempat Lahir</label>
+                <div class="col-sm-10">
+                  <input type="text" class="form-control" id="tempat" name="tempat" value="TEMPAT_VALUE">
+                </div>
+            </div>
+            <div class="row mb-3">
+                <label for="tl" class="col-sm-2 col-form-label">Tanggal Lahir</label>
+                <div class="col-sm-10">
+                  <input type="date" class="form-control" id="tl" name="tl" value="TL_VALUE">
+                </div>
+            </div>
+            <div class="row mb-3">
+                <label class="col-sm-2 col-form-label">Jenis Kelamin</label>
+                <div style="padding: 0 15px;" class="d-flex align-items-center">
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="gender" id="laki-laki" value="Laki-laki" LAKI-LAKI_VALUE>
+                        <label class="form-check-label" for="laki-laki">
+                        Laki-laki
+                        </label>
+                    </div>
+                    <div class="form-check ml-4">
+                        <input class="form-check-input" type="radio" name="gender" id="perempuan" value="Perempuan" PEREMPUAN_VALUE>
+                        <label class="form-check-label" for="perempuan">
+                        Perempuan
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="row mb-3">
+                <label for="email" class="col-sm-2 col-form-label">Surel/Email</label>
+                <div class="col-sm-10">
+                  <input type="email" class="form-control" id="email" name="email" value="EMAIL_VALUE">
+                </div>
+            </div>
+            <div class="row mb-3">
+                <label for="telp" class="col-sm-2 col-form-label">No. Telepon</label>
+                <div class="col-sm-10">
+                  <input type="number" class="form-control" id="telp" name="telp" value="TELP_VALUE">
+                </div>
+            </div>
+            <br>
+            <br>
+            <center><button type="submit" class="btn btn-primary" name="submit">KIRIM</button></center>
+        </form>
+    </div>
+</body>
+    <!-- Footer -->
+    <footer class="art-footer clearfix">
+      <br><p><center>Copyright &copy 2023. IBNU ADENG KURNIA. </center></p>
+      <p><center>All Rights Reserved.</center></p>
+      <center><a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Lisensi Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" /></a></center> <center>Ciptaan disebarluaskan di bawah <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Lisensi Creative Commons Atribusi-NonKomersial-TanpaTurunan 4.0 Internasional</a></center>.
+    </footer>
+
+</html>
